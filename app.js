@@ -1,34 +1,18 @@
-const express = require('express')
-const cors = require('cors')
-// const crypto = require('node:crypto')
+import express, { json } from 'express'
+import { corsMiddleware } from './middlewares/cors.js'
+import { projectsRouter } from './routes/projects.js'
+import { techsRouter } from './routes/techs.js'
 
 const app = express()
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      const ALLOWED_ORIGINS = ['http://localhost:3000', 'http://localhost:3001']
 
-      if (!origin) return callback(null, true)
-
-      if (ALLOWED_ORIGINS.indexOf(origin) === -1) {
-        const msg =
-          'The CORS policy for this site does not allow access from the specified Origin.'
-        return callback(new Error(msg), false)
-      }
-
-      return callback(null, true)
-    }
-  })
-)
+// Middlewares
+app.use(corsMiddleware())
+app.use(json())
 app.disable('x-powered-by')
 
-app.get('/proyectos', (req, res) => {
-  res.json([
-    { id: 1, nombre: 'Proyecto 1' },
-    { id: 2, nombre: 'Proyecto 2' },
-    { id: 3, nombre: 'Proyecto 3' }
-  ])
-})
+// Endpoints
+app.get('/projects', projectsRouter)
+app.get('/techs', techsRouter)
 
 const PORT = process.env.PORT ?? 1234
 
