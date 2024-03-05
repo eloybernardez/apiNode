@@ -1,22 +1,23 @@
 {
-    "version": 2,
-    "routes": [
+    "headers": [
       {
-        "src": "/movies/*",
-        "methods": ["GET"],
-        "headers": {
-            "key": "Content-Type",
-            "value": "Authorization"
-        }
+        "source": "/projects/(.*)",
+        "headers": [
+          { "key": "Access-Control-Allow-Credentials", "value": "true" },
+          { "key": "Access-Control-Allow-Origin", "value": "*" },
+          { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS" },
+          { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" }
+        ]
       },
-      {
-        "src": "/techs/*",
-        "methods": ["GET"],
-        "headers": {
-            "key": "Content-Type",
-            "value": "Authorization"
+        {
+            "source": "/techs/(.*)",
+            "headers": [
+            { "key": "Access-Control-Allow-Credentials", "value": "true" },
+            { "key": "Access-Control-Allow-Origin", "value": "*" },
+            { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS" },
+            { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" }
+            ]
         }
-      }
     ]
   }
   
