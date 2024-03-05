@@ -1,17 +1,19 @@
 import express, { json } from 'express'
-import cors from 'cors'
-// import { corsMiddleware } from './middlewares/cors.js'
+import { corsMiddleware } from './middlewares/cors.js'
 import { projectsRouter } from './routes/projects.js'
 import { techsRouter } from './routes/techs.js'
 
 const app = express()
 
 // Middlewares
-app.use(cors())
+app.use(corsMiddleware())
 app.use(json())
 app.disable('x-powered-by')
 
 // Endpoints
+app.get('/', (req, res) => {
+  res.send('Server listening')
+})
 app.use('/projects', projectsRouter)
 app.use('/techs', techsRouter)
 
