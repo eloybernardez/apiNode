@@ -1,4 +1,4 @@
-import { readJSON } from '../utils/utils'
+import { readJSON } from '../utils/utils.js'
 
 const techs = readJSON('../techs.json')
 

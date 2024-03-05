@@ -11,8 +11,8 @@ app.use(json())
 app.disable('x-powered-by')
 
 // Endpoints
-app.get('/projects', projectsRouter)
-app.get('/techs', techsRouter)
+app.use('/projects', projectsRouter)
+app.use('/techs', techsRouter)
 
 const PORT = process.env.PORT ?? 1234
 
