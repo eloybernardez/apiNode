@@ -11,9 +11,6 @@ app.use(json())
 app.disable('x-powered-by')
 
 // Endpoints
-app.get('/', (req, res) => {
-  res.send('Server listening')
-})
 app.use('/projects', projectsRouter)
 app.use('/techs', techsRouter)
 
