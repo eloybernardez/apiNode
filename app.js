@@ -1,12 +1,13 @@
 import express, { json } from 'express'
-import { corsMiddleware } from './middlewares/cors.js'
+import cors from 'cors'
+// import { corsMiddleware } from './middlewares/cors.js'
 import { projectsRouter } from './routes/projects.js'
 import { techsRouter } from './routes/techs.js'
 
 const app = express()
 
 // Middlewares
-app.use(corsMiddleware())
+app.use(cors())
 app.use(json())
 app.disable('x-powered-by')
 
