@@ -4,12 +4,18 @@
       {
         "src": "/movies/*",
         "methods": ["GET"],
-        "headers": ["Content-Type", "Authorization"]
+        "headers": {
+            "key": "Content-Type",
+            "value": "Authorization"
+        }
       },
       {
         "src": "/techs/*",
         "methods": ["GET"],
-        "headers": ["Content-Type", "Authorization"]
+        "headers": {
+            "key": "Content-Type",
+            "value": "Authorization"
+        }
       }
     ]
   }
