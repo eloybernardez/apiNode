@@ -3,3 +3,6 @@ GET http://localhost:1234/projects
 
 ###
 GET http://localhost:1234/techs
+
+###
+GET http://localhost:1234/cv
