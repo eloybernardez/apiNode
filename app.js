@@ -3,6 +3,7 @@ import { corsMiddleware } from './middlewares/cors.js'
 import { projectsRouter } from './routes/projects.js'
 import { techsRouter } from './routes/techs.js'
 import { filesRouter } from './routes/files.js'
+import { experienceRouter } from './routes/experience.js'
 
 const app = express()
 
@@ -14,6 +15,7 @@ app.disable('x-powered-by')
 // Endpoints
 app.use('/projects', projectsRouter)
 app.use('/techs', techsRouter)
+app.use('/experience', experienceRouter)
 app.use('/cv', filesRouter)
 
 const PORT = process.env.PORT ?? 1234

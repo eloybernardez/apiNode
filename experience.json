@@ -1,0 +1,31 @@
+{
+    "experience": [
+        {
+            "company": "Zerobug",
+            "position": "Full Stack Developer",
+            "startDate": "2023-05-22",
+            "endDate": null,
+            "description": {
+                "intro": "Developed and maintained web applications using .NET, Angular and SQL Server in oil and medical industries.",
+                "highlights": [
+                    {
+                        "title": "Increased development speed and quality by suggesting the use of GIT",
+                        "description": "Successfully implemented GIT version control, streamlining the development process and improving code quality through collaborative workflows."
+                    },
+                    {
+                        "title": "Worked closely with the client to implement and modify features",
+                        "description": "Collaborated closely with clients to gather requirements, design features, and implement them according to their specifications."
+                    },
+                    {
+                        "title": "Contributed ideas to improve the efficiency and usability of the client's websites",
+                        "description": "Proactively identified areas for improvement and suggested innovative solutions to enhance user experience and website performance."
+                    },
+                    {
+                        "title": "Provided support, guidance, and instruction to fellow programmers",
+                        "description": "Mentored and supported junior colleagues, sharing knowledge and expertise to foster a collaborative and productive team environment."
+                    }
+                ]
+            }
+        }
+    ]
+}
